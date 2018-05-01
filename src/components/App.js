@@ -1,12 +1,10 @@
-import React from 'react';
-import Header from './Header';
-import MainContent from './MainContent';
+import React from "react";
+import Blog from "../pages/Blog";
 
 const App = () => (
   <div>
-    <Header />
-    <MainContent />
+    <Blog />
   </div>
-)
+);
 
-export default App
+export default App;
