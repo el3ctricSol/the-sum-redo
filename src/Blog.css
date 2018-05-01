@@ -1,0 +1,594 @@
+@media screen {
+  body {
+    margin: 0;
+    padding: 0;
+    color: #666666;
+    font-family: "Helvetica Neue", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+  }
+  /* ~~ Element/tag selectors ~~ */
+  ul,
+  ol,
+  dl {
+    /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+    padding: 0;
+    margin: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-top: 0;
+    /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+    padding-right: 15px;
+    /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+  }
+  h5 {
+    color: #444;
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: -9px;
+  }
+  a {
+    outline: none;
+  }
+  a img {
+    /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+    border: none;
+  }
+  /* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+  a:link {
+    color: #42413c;
+    text-decoration: none;
+    /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+  }
+  a:visited {
+    color: #6e6c64;
+    text-decoration: underline;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+    text-decoration: none;
+  }
+  .wrapper {
+    background-color: #f9f9f9;
+    width: 100%;
+    margin-top: -50px;
+    padding-top: 24px;
+  }
+  /* ~~ this fixed width container surrounds all other elements ~~ */
+  .container {
+    width: 1200px;
+    background: #f9f9f9;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
+  /* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+  .content {
+    padding: 10px 0;
+  }
+  /* ~~ miscellaneous float/clear classes ~~ */
+  .fltrt {
+    /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+    float: right;
+    margin-left: 8px;
+  }
+  .fltlft {
+    /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+    float: left;
+    margin-right: 8px;
+  }
+  .clearfloat {
+    /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0px;
+  }
+  h2 {
+    font-size: 31px;
+  }
+  h3 {
+    color: gray;
+    margin-bottom: 7px;
+    font-size: 24px;
+  }
+  h4 {
+    color: #222;
+    margin-bottom: 7px;
+    font-size: 18px;
+  }
+  #logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+  #header {
+    height: 80px;
+    border-bottom: 1px solid #666666;
+  }
+  #columnLeft {
+    float: left;
+    width: 234px;
+    margin-right: 0;
+  }
+  #columnRight {
+    margin-left: 234px;
+  }
+  #columnRight {
+    margin-bottom: -20px;
+  }
+  #menu {
+    list-style-type: none;
+    padding-top: 23px;
+    margin-left: 144px;
+  }
+  #menu li {
+    float: left;
+    height: 40px;
+    padding-top: 4px;
+    color: white;
+    padding-left: 5px;
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+  #menu li.divline {
+    padding: 0;
+    border-right: thin solid gray;
+    height: 8px;
+    margin: 26px 0 0;
+  }
+  #main {
+    margin-top: 50px;
+    font-size: 12px;
+  }
+  #mainLeft {
+    width: 280px;
+    font-size: 16px;
+    float: left;
+  }
+  #mainLeft .text {
+    margin-top: 20px;
+    float: none;
+    margin-bottom: 60px;
+  }
+  #mainRight {
+    margin-left: 293px;
+    padding-left: 40px;
+  }
+  #mainRight {
+    padding-left: 40px;
+  }
+  .HeadercolumnLeft {
+    padding-top: 30px;
+  }
+  #main a {
+    text-decoration: underline;
+  }
+  .line {
+    border-top: 1px solid #666;
+  }
+  .contact .line {
+    padding-top: 30px;
+    border-top-style: dotted;
+    border-top-color: gray;
+  }
+  #contactFormBox {
+    background-color: #f1f1f1;
+    padding: 30px;
+    margin-top: 30px;
+    margin-left: -30px;
+    margin-bottom: 60px;
+    width: 450px;
+  }
+  input {
+    width: 250px;
+    height: 12px;
+    padding: 5px;
+  }
+  #error {
+    color: #fb6467;
+    font-size: 12px;
+    display: none;
+    font-weight: bold;
+    float: left;
+    text-align: left;
+    width: 248px;
+  }
+  .needsfilled {
+    color: #fff;
+    background: #fb6467;
+    font-weight: bold;
+    font-style: italic;
+  }
+  label {
+    background: black no-repeat;
+    color: #ddd;
+    font-size: 12px;
+    padding: 5px 10px 4px;
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    display: inline;
+  }
+  #message {
+    margin-left: 0;
+    padding: 5px;
+    width: 438px;
+  }
+  .projectNav {
+    margin-bottom: 70px;
+  }
+  .projectNav a {
+    color: #666666;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 1px 5px;
+  }
+  .projectNav a:hover {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+  }
+  .projectNavFloat {
+    float: left;
+    padding-right: 80px;
+  }
+  iframe {
+    border-style: none;
+  }
+  #blogSidebar {
+    color: #000;
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  .blogSidebarNav ul {
+    margin-top: 16px;
+  }
+  .blogSidebarNav ul li.cat-item.cat-item {
+    list-style-type: none;
+    list-style-position: inside;
+    list-style-image: none;
+    background: url(http://www.thesum.ca/images/blogPlus.gif) no-repeat;
+    padding-left: 28px;
+    height: 22px;
+    margin-top: 4px;
+    font-size: 14px;
+    padding-top: 2px;
+    color: gray;
+  }
+  #main .blogSidebarNav a {
+    text-decoration: none;
+    color: gray;
+  }
+  #main .blogSidebarNav a:hover {
+    text-decoration: underline;
+  }
+  .blogSidebarNav img {
+    margin-bottom: -5px;
+    padding-right: 8px;
+  }
+  .blogHead {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  .blogTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #mainRight .blogTitle a {
+    text-decoration: none;
+    color: #666;
+  }
+  .blogContent {
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    margin-bottom: 20px;
+  }
+  .blogContent img {
+    margin-bottom: 20px;
+  }
+  #footer {
+    color: #666666;
+    font-size: 11px;
+    height: 100px;
+    background-repeat: no-repeat;
+    margin-top: -92px;
+  }
+  #footer .container {
+    background-color: #000;
+    width: 956px;
+    padding-left: 231px;
+    height: 100px;
+  }
+  #footer .nav {
+    float: left;
+    padding-left: 50px;
+  }
+  #footerImg {
+    height: 92px;
+    background: url(images/footer.gif) no-repeat center;
+  }
+  #footer #stripe {
+    height: 20px;
+    margin-bottom: 8px;
+    background: black no-repeat;
+  }
+  #footer a {
+    color: #3f3d3d;
+    text-decoration: none;
+  }
+  #footer a:hover {
+    color: #adada2;
+    text-decoration: underline;
+  }
+  #stripeLeft {
+    background: url(images/stripeRoundLeft.gif) no-repeat left top;
+    height: 6px;
+    float: left;
+    width: 5px;
+  }
+  #stripeRight {
+    background: url(images/stripeRoundRight.gif) no-repeat left top;
+    height: 6px;
+    border-color: #fa863d;
+    float: right;
+    width: 5px;
+  }
+  #copywrite {
+    float: left;
+    padding-right: 70px;
+  }
+  #contact {
+    float: right;
+    text-align: right;
+  }
+  .projectform #contactFormBox {
+    background-color: #f1f1f1;
+    padding: 30px;
+    margin-top: 30px;
+    margin-left: -30px;
+    margin-bottom: 60px;
+    width: 500px;
+  }
+  .projectform .msg label {
+    color: gray;
+    font-size: 12px;
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    display: inline;
+    padding: 4px 10px;
+    background-color: transparent;
+  }
+  .projectform .msg p label .label {
+    padding: 0 83px 0 5px;
+    margin: -6px 0 -10px;
+  }
+  .projectform h1 {
+    color: black;
+    letter-spacing: -2px;
+  }
+  .projectform h3 {
+    font-size: 24px;
+    color: black;
+    letter-spacing: -2px;
+  }
+  .projectform .topPad {
+    padding-top: 10px;
+  }
+  .projectform .line {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-color: silver;
+  }
+  .projectform .submit {
+    margin-right: 10px;
+  }
+  .entry {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted black;
+  }
+  .postmetadata {
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+  }
+  li.pagenav {
+    list-style-type: none;
+  }
+  #commentsBox {
+    margin-top: 40px;
+    padding-left: 40px;
+  }
+  img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+  }
+  img.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+  }
+  .alignright {
+    float: right;
+  }
+  .alignleft {
+    float: left;
+  }
+  #tweet-this-3 {
+    margin-top: 40px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-top: 20px;
+  }
+  #tweet-this-3 h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+    background: url(http://thesum.ca/blog/wp-content/themes/thesum/images/brd.gif)
+      no-repeat;
+    padding-left: 32px;
+  }
+  ul.tweets {
+    margin-top: -20px;
+  }
+  ul.tweets li {
+    font-size: 12px;
+    background-image: none;
+    padding-top: 16px;
+    padding-left: 0;
+    padding-right: 10px;
+    margin-top: 0;
+    margin-bottom: 13px;
+    list-style-type: disc;
+  }
+  a.timesince {
+    font-weight: bold;
+    font-style: italic;
+  }
+  .tweetthis {
+    padding-top: 20px;
+  }
+  span.twitterwidget.twitterwidget-title {
+    font-size: 18px;
+    padding-bottom: 10px;
+    background: url(http://thesum.ca/blog/wp-content/themes/thesum/images/brd.gif)
+      no-repeat;
+    padding-left: 32px;
+  }
+  .blogSidebarNav #twitter-4.widget.widget_twitter ul li {
+    list-style-type: none;
+    list-style-image: none;
+    margin-top: 20px;
+    font-size: 12px;
+    color: gray;
+  }
+  #twitter-4.widget.widget_twitter {
+    border-top-style: dotted;
+    border-top-width: 1px;
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+  .follow-button {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  /* END screen media */
+  @media print {
+    .do-not-print {
+      display: none;
+    }
+    #comments {
+      page-break-before: always;
+    }
+    body {
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1.4;
+      word-spacing: 1.1pt;
+      letter-spacing: 0.2pt;
+      font-family: Garamond, "Times New Roman", serif;
+      color: #000;
+      background: none;
+      font-size: 12pt;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    h1 {
+      font-size: 19pt;
+    }
+    h2 {
+      font-size: 17pt;
+    }
+    h3 {
+      font-size: 15pt;
+    }
+    h4,
+    h5,
+    h6 {
+      font-size: 12pt;
+    }
+    code {
+      font: 10pt Courier, monospace;
+    }
+    blockquote {
+      margin: 1.3em;
+      padding: 1em;
+    }
+    img {
+      display: block;
+      margin: 1em 0;
+    }
+    a img {
+      border: none;
+    }
+    table {
+      margin: 1px;
+      text-align: left;
+    }
+    th {
+      border-bottom: 1px solid #333;
+      font-weight: bold;
+    }
+    td {
+      border-bottom: 1px solid #333;
+    }
+    th,
+    td {
+      padding: 4px 10px 4px 0;
+    }
+    caption {
+      background: #fff;
+      margin-bottom: 2em;
+      text-align: left;
+    }
+    thead {
+      display: table-header-group;
+    }
+    tr {
+      page-break-inside: avoid;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+/* END print media */
